@@ -1,12 +1,21 @@
 ---
 import type { AstroCookieSetOptions } from "astro";
 
+// reproduction one
 const options: AstroCookieSetOptions = {
   httpOnly: true,
   maxAge: 0,
   path: "/",
   secure: true
 }
+
+// reproduction two
+Astro.cookies.set("x", "y", {
+  httpOnly: true,
+  maxAge: 0,
+  path: "/",
+  secure: true
+})
 ---
 
 <html lang="en">
